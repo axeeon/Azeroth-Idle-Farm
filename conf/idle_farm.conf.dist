@@ -1,0 +1,76 @@
+###################################################################################################
+#  mod-idle-farm
+#
+#  Simulated offline farming. A player picks a mob with `.idle set`; while they are logged out the
+#  server credits kills of that mob on their next login: experience, money and loot, with loot and
+#  money delivered by mail.
+###################################################################################################
+
+#    IdleFarm.Enable
+#        Description: Master switch.
+#        Default:     1
+IdleFarm.Enable = 1
+
+#    IdleFarm.MinOfflineMinutes
+#        Description: Shortest absence that earns anything.
+#        Default:     5
+IdleFarm.MinOfflineMinutes = 5
+
+#    IdleFarm.MaxOfflineHours
+#        Description: Longest absence that is counted; time beyond it earns nothing.
+#        Default:     8
+IdleFarm.MaxOfflineHours = 8
+
+#    IdleFarm.SecondsPerKill
+#        Description: Seconds one kill takes a character at the mob's level, before efficiency.
+#                     Every level the mob is above the character adds 25%; elites take three times
+#                     as long.
+#        Default:     30
+IdleFarm.SecondsPerKill = 30
+
+#    IdleFarm.Efficiency
+#        Description: Fraction of the away time spent actually killing (0.1 - 1.0).
+#        Default:     0.5
+IdleFarm.Efficiency = 0.5
+
+#    IdleFarm.MaxKills
+#        Description: Hard cap on kills credited per login.
+#        Default:     600
+IdleFarm.MaxKills = 600
+
+#    IdleFarm.Rate.XP
+#    IdleFarm.Rate.Money
+#    IdleFarm.Rate.Loot
+#        Description: Extra multipliers on top of the realm's own kill XP and money rates. Loot is
+#                     the fraction of rolled kills whose drops are kept (1.0 keeps all).
+#        Default:     1.0
+IdleFarm.Rate.XP = 1.0
+IdleFarm.Rate.Money = 1.0
+IdleFarm.Rate.Loot = 1.0
+
+#    IdleFarm.SellGrey
+#        Description: 1 converts poor-quality drops straight into money instead of mailing them.
+#        Default:     1
+IdleFarm.SellGrey = 1
+
+#    IdleFarm.MaxMails
+#        Description: Most mails one report may send (12 item stacks each). Best items are kept.
+#        Default:     5
+IdleFarm.MaxMails = 5
+
+#    IdleFarm.AllowElite
+#        Description: 1 lets players pick elite mobs.
+#        Default:     0
+IdleFarm.AllowElite = 0
+
+#    IdleFarm.LevelsBelow
+#    IdleFarm.LevelsAbove
+#        Description: How far below / above their own level a character's target may be.
+#        Default:     4 / 2
+IdleFarm.LevelsBelow = 4
+IdleFarm.LevelsAbove = 2
+
+#    IdleFarm.NpcSearchRadius
+#        Description: How far (in yards) the Idle Farming Master looks for creatures a player can pick.
+#        Default:     150
+IdleFarm.NpcSearchRadius = 150
